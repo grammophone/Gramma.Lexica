@@ -121,7 +121,9 @@ namespace Gramma.Lexica.Configuration
 		/// Save a lexicon to disk.
 		/// </summary>
 		/// <param name="lexicon">The lexicon to save,</param>
-		/// <param name="filename">The filename to save to.</param>
+		/// <param name="filename">
+		/// The filename to save to, optinally qualified to specify a <see cref="DataStreaming.IStreamer"/>.
+		/// </param>
 		/// <returns>Returns a task completing the action.</returns>
 		public static Task SaveLexiconAsync(Lexicon lexicon, string filename)
 		{
@@ -131,7 +133,7 @@ namespace Gramma.Lexica.Configuration
 			{
 				var formatter = GetSerializationFormatter();
 
-				using (var stream = new System.IO.FileStream(filename, System.IO.FileMode.Create))
+				using (var stream = DataStreaming.Configuration.StreamingEnvironment.OpenWriteStream(filename))
 				{
 					formatter.Serialize(stream, lexicon);
 				}

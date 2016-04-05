@@ -15,7 +15,8 @@ namespace Gramma.Lexica.Provision
 		#region Public properties
 
 		/// <summary>
-		/// Path of the binary image of the lexicon.
+		/// Path of the binary image of the lexicon, optionally qualified for selecting a
+		/// configured <see cref="DataStreaming.IStreamer"/>.
 		/// </summary>
 		public string Path { get; set; } = String.Empty;
 
@@ -33,7 +34,7 @@ namespace Gramma.Lexica.Provision
 			{
 				var formatter = Configuration.LexicaEnvironment.GetSerializationFormatter();
 
-				using (var stream = new System.IO.FileStream(this.Path, System.IO.FileMode.Open))
+				using (var stream = DataStreaming.Configuration.StreamingEnvironment.OpenReadStream(this.Path))
 				{
 					var lexicon = (Lexicon)formatter.Deserialize(stream);
 
@@ -60,7 +61,7 @@ namespace Gramma.Lexica.Provision
 			{
 				var formatter = Configuration.LexicaEnvironment.GetSerializationFormatter();
 
-				using (var stream = new System.IO.FileStream(this.Path, System.IO.FileMode.Create))
+				using (var stream = DataStreaming.Configuration.StreamingEnvironment.OpenWriteStream(this.Path))
 				{
 					formatter.Serialize(stream, lexicon);
 				}
