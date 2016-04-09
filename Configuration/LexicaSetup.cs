@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gramma.Configuration;
-using Gramma.LanguageModel.Provision;
-using Gramma.Lexica.Provision;
-using Gramma.Lexica.Sources;
+using Grammophone.Configuration;
+using Grammophone.LanguageModel.Provision;
+using Grammophone.Lexica.Provision;
+using Grammophone.Lexica.Sources;
 
-namespace Gramma.Lexica.Configuration
+namespace Grammophone.Lexica.Configuration
 {
 	/// <summary>
 	/// Intended to be the root of the XAML configuration.
 	/// </summary>
-	public class LexicaSetup : Gramma.Configuration.IXamlLoadListener
+	public class LexicaSetup : Grammophone.Configuration.IXamlLoadListener
 	{
 		#region Public properties
 

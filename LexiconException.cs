@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Gramma.Lexica
+namespace Grammophone.Lexica
 {
 	/// <summary>
 	/// Exception for the system of lexica.

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gramma.GenericContentModel;
-using Gramma.LanguageModel.TrainingSources;
-using Gramma.Lexica.LexiconModel;
+using Grammophone.GenericContentModel;
+using Grammophone.LanguageModel.TrainingSources;
+using Grammophone.Lexica.LexiconModel;
 
-namespace Gramma.Lexica.Sources
+namespace Grammophone.Lexica.Sources
 {
 	/// <summary>
 	/// Ordered collection of <see cref="TrainingSource{Lemma}"/> elements,

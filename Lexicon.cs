@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Gramma.Linq;
-using Gramma.Indexing;
-using Gramma.LanguageModel.Provision;
-using Gramma.Lexica.LexiconModel;
-using Gramma.GenericContentModel;
+using Grammophone.Linq;
+using Grammophone.Indexing;
+using Grammophone.LanguageModel.Provision;
+using Grammophone.Lexica.LexiconModel;
+using Grammophone.GenericContentModel;
 
-namespace Gramma.Lexica
+namespace Grammophone.Lexica
 {
 	/// <summary>
 	/// Represents a lexicon associated
-	/// with a <see cref="Gramma.LanguageModel.Provision.LanguageProvider"/>.
+	/// with a <see cref="Grammophone.LanguageModel.Provision.LanguageProvider"/>.
 	/// </summary>
 	[Serializable]
 	public class Lexicon : IKeyedElement<LanguageProvider>

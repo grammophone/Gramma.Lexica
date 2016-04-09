@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gramma.LanguageModel.Provision;
+using Grammophone.LanguageModel.Provision;
 
-namespace Gramma.Lexica.Provision
+namespace Grammophone.Lexica.Provision
 {
 	/// <summary>
 	/// A moniker used to load a <see cref="Lexicon"/> from a binary image.

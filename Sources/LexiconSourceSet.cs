@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gramma.LanguageModel.TrainingSources;
+using Grammophone.LanguageModel.TrainingSources;
 
-namespace Gramma.Lexica.Sources
+namespace Grammophone.Lexica.Sources
 {
 	/// <summary>
 	/// Root of a definition of <see cref="TrainingSource{Lemma}"/> sources

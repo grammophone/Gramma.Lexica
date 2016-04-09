@@ -5,11 +5,11 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xaml;
-using Gramma.Configuration;
-using Gramma.GenericContentModel;
-using Gramma.LanguageModel.Provision;
+using Grammophone.Configuration;
+using Grammophone.GenericContentModel;
+using Grammophone.LanguageModel.Provision;
 
-namespace Gramma.Lexica.Configuration
+namespace Grammophone.Lexica.Configuration
 {
 	/// <summary>
 	/// The environment where the configuration and the available lexica resources are registered.
@@ -162,7 +162,7 @@ namespace Gramma.Lexica.Configuration
 
 		internal static IFormatter GetSerializationFormatter()
 		{
-			var formatter = new Gramma.Serialization.FastBinaryFormatter();
+			var formatter = new Grammophone.Serialization.FastBinaryFormatter();
 
 			return formatter;
 		}

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gramma.Lexica.LexiconModel
+namespace Grammophone.Lexica.LexiconModel
 {
 	/// <summary>
 	/// A lemma of a dictionary, a key.

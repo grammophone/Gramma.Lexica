@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gramma.GenericContentModel;
-using Gramma.LanguageModel.Provision;
+using Grammophone.GenericContentModel;
+using Grammophone.LanguageModel.Provision;
 
-namespace Gramma.Lexica.Provision
+namespace Grammophone.Lexica.Provision
 {
 	/// <summary>
 	/// Read-only collection of <see cref="LexiconProvider"/> elements,

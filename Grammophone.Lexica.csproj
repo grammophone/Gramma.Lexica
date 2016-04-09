@@ -7,8 +7,8 @@
     <ProjectGuid>{B69C71DF-06AC-420F-9EFD-62058E79C1DC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Gramma.Lexica</RootNamespace>
-    <AssemblyName>Gramma.Lexica</AssemblyName>
+    <RootNamespace>Grammophone.Lexica</RootNamespace>
+    <AssemblyName>Grammophone.Lexica</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -20,7 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\Gramma.Lexica.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\Grammophone.Lexica.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,7 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\Gramma.Lexica.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\Grammophone.Lexica.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -60,33 +60,33 @@
     <Compile Include="Sources\LexiconSourceSets.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Gramma.Configuration\Gramma.Configuration.csproj">
+    <ProjectReference Include="..\Grammophone.Configuration\Grammophone.Configuration.csproj">
       <Project>{0f7811fd-6162-4813-9c55-6c43e67308b0}</Project>
-      <Name>Gramma.Configuration</Name>
+      <Name>Grammophone.Configuration</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.DataStreaming\Gramma.DataStreaming.csproj">
+    <ProjectReference Include="..\Grammophone.DataStreaming\Grammophone.DataStreaming.csproj">
       <Project>{9841e0b6-915b-4ec6-b2ec-43a83e112c91}</Project>
-      <Name>Gramma.DataStreaming</Name>
+      <Name>Grammophone.DataStreaming</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.GenericContentModel\Gramma.GenericContentModel.csproj">
+    <ProjectReference Include="..\Grammophone.GenericContentModel\Grammophone.GenericContentModel.csproj">
       <Project>{79d2d4c7-c8de-4f11-93ed-aa4e4d2fc974}</Project>
-      <Name>Gramma.GenericContentModel</Name>
+      <Name>Grammophone.GenericContentModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.Indexing\Gramma.Indexing.csproj">
+    <ProjectReference Include="..\Grammophone.Indexing\Grammophone.Indexing.csproj">
       <Project>{937a024f-5dc5-4ca6-864e-bf5d9cb2e039}</Project>
-      <Name>Gramma.Indexing</Name>
+      <Name>Grammophone.Indexing</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.LanguageModel\Gramma.LanguageModel.csproj">
+    <ProjectReference Include="..\Grammophone.LanguageModel\Grammophone.LanguageModel.csproj">
       <Project>{5461b4b2-0832-42d5-ae04-6b2a7d4bf4dc}</Project>
-      <Name>Gramma.LanguageModel</Name>
+      <Name>Grammophone.LanguageModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.Linq\Gramma.Linq.csproj">
+    <ProjectReference Include="..\Grammophone.Linq\Grammophone.Linq.csproj">
       <Project>{e5b5f560-5224-49cc-b807-d13ce452d63b}</Project>
-      <Name>Gramma.Linq</Name>
+      <Name>Grammophone.Linq</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gramma.Serialization\Gramma.Serialization.csproj">
+    <ProjectReference Include="..\Grammophone.Serialization\Grammophone.Serialization.csproj">
       <Project>{b0e855cb-8a43-4623-8184-31cd4b4ebb57}</Project>
-      <Name>Gramma.Serialization</Name>
+      <Name>Grammophone.Serialization</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
