@@ -144,16 +144,47 @@ namespace Grammophone.Lexica.Configuration
 		/// <summary>
 		/// Import all lexica defined in source sets in <see cref="LexicaSetup.LexiconSourceSets"/>
 		/// of <see cref="Setup"/>.
+		/// Clears any previously defined lexica.
 		/// </summary>
 		/// <returns>Returns a task completing the operation.</returns>
 		public static async Task ImportLexicaAsync()
 		{
+			var importedLexica = new List<Lexicon>();
+
 			foreach (var sourceSet in Setup.LexiconSourceSets)
 			{
 				var lexicon = await sourceSet.ImportLexiconAsync();
 
 				Lexica.Add(lexicon);
 			}
+
+			Lexica.Clear();
+			Lexica.AddAll(importedLexica);
+		}
+
+		/// <summary>
+		/// Import all lexica defined for a <see cref="LanguageProvider"/>.
+		/// Clears any previously defined lexica for the given <see cref="LanguageProvider"/>.
+		/// </summary>
+		/// <param name="languageProvider">The language provider.</param>
+		/// <returns>Returns a task completing the operation.</returns>
+		public static async Task ImportLexicaAsync(LanguageProvider languageProvider)
+		{
+			if (languageProvider == null) throw new ArgumentNullException(nameof(languageProvider));
+
+			var sourceSet = Setup.LexiconSourceSets[languageProvider];
+
+			var importedLexica = new List<Lexicon>(sourceSet.Count);
+
+			foreach (var source in sourceSet)
+			{
+				var lexicon = await source.ImportLexiconAsync();
+
+				importedLexica.Add(lexicon);
+			}
+
+			Lexica.RemoveKey(languageProvider);
+			Lexica.AddAll(importedLexica);
 		}
 
 		#endregion
