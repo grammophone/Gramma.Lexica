@@ -168,7 +168,7 @@ namespace Grammophone.Lexica.Configuration
 		/// </summary>
 		/// <param name="languageProvider">The language provider.</param>
 		/// <returns>Returns a task completing the operation.</returns>
-		public static async Task ImportLexicaAsync(LanguageProvider languageProvider)
+		public static async Task<IReadOnlyCollection<Lexicon>> ImportLexicaAsync(LanguageProvider languageProvider)
 		{
 			if (languageProvider == null) throw new ArgumentNullException(nameof(languageProvider));
 
@@ -185,6 +185,8 @@ namespace Grammophone.Lexica.Configuration
 
 			Lexica.RemoveKey(languageProvider);
 			Lexica.AddAll(importedLexica);
+
+			return importedLexica;
 		}
 
 		#endregion
