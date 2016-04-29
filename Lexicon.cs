@@ -22,7 +22,7 @@ namespace Grammophone.Lexica
 		#region Auxilliary classes
 
 		/// <summary>
-		/// Assigns lemmata to the lexicon's <see cref="suffixTree"/> nodes.
+		/// Assigns lemmata to the lexicon's <see cref="radixTree"/> nodes.
 		/// </summary>
 		[Serializable]
 		private class LexiconWordItemProcessor : WordItemProcessor<string, Lemma, IList<Lemma>>
@@ -49,7 +49,7 @@ namespace Grammophone.Lexica
 		[NonSerialized]
 		private LanguageProvider languageProvider;
 
-		private SuffixTree<string, Lemma, IList<Lemma>> suffixTree;
+		private RadixTree<string, Lemma, IList<Lemma>> radixTree;
 
 		private MultiDictionary<string, Lemma> lemmataByKey;
 
@@ -67,7 +67,8 @@ namespace Grammophone.Lexica
 			this.Name = name;
 			this.Description = description;
 
-			this.suffixTree = new SuffixTree<string, Lemma, IList<Lemma>>(lexiconWordItemProcessor);
+			this.radixTree = new WordTree<string, Lemma, IList<Lemma>>(lexiconWordItemProcessor);
+
 			this.lemmataByKey = new MultiDictionary<string, Lemma>();
 		}
 
@@ -130,7 +131,7 @@ namespace Grammophone.Lexica
 
 			var syllabicForm = syllabizer.Segment(form);
 
-			var results = suffixTree.ApproximateSearch(
+			var results = radixTree.ApproximateSearch(
 				syllabicForm.ToArray(), 
 				maxEditDistance, 
 				(baseSyllable, targetSyllable) => syllabizer.GetDistance(baseSyllable, targetSyllable).Cost);
@@ -155,7 +156,7 @@ namespace Grammophone.Lexica
 
 			var syllabicForm = syllabizer.Segment(form);
 
-			var results = suffixTree.ApproximateSearch(
+			var results = radixTree.ApproximateSearch(
 				syllabicForm.ToArray(),
 				maxEditDistance,
 				(baseSyllable, targetSyllable) => syllabizer.GetDistance(baseSyllable, targetSyllable).Cost);
@@ -201,7 +202,7 @@ namespace Grammophone.Lexica
 
 			var syllabicForm = syllabizer.Segment(lemma.Form);
 
-			suffixTree.AddWord(syllabicForm.ToArray(), lemma);
+			radixTree.AddWord(syllabicForm.ToArray(), lemma);
 
 			lemmataByKey.Add(lemma.Key, lemma);
 		}
