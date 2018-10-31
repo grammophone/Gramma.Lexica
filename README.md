@@ -13,7 +13,7 @@ Importers of lexica from various sources must derive from the `TrainingSource<Le
 This projects relies on the following projects being in sibling directories:
 * [Grammophone.Configuration](https://github.com/grammophone/Grammophone.Configuration)
 * [Grammophone.DataStreaming](https://github.com/grammophone/Grammophone.DataStreaming)
-* [Grammophone.GenericContentModel](https://github.com/grammophone/Grammophone.GenericContentMoel)
+* [Grammophone.GenericContentModel](https://github.com/grammophone/Grammophone.GenericContentModel)
 * [Grammophone.Indexing](https://github.com/grammophone/Grammophone.Indexing)
 * [Grammophone.LanguageModel](https://github.com/grammophone/Grammophone.LanguageModel)
 * [Grammophone.Serialization](https://github.com/grammophone/Grammophone.Serialization)
